@@ -1,0 +1,24 @@
+.stats-cards {
+    .mat-card {
+        overflow: hidden;
+    }
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    padding: 5px;
+    justify-content: center;
+    text-align: center;
+}
+
+button {
+    border: none;
+    background: none;
+    .edit {
+        color: green;
+        font-size: 1.8rem;
+    }
+}

@@ -1,0 +1,27 @@
+<content>
+    <div class="container">
+        <div class="forms-container">
+            <div class="signin-signup">
+                <form class="sign-in-form" #data="ngForm" (ngSubmit)="loginPass(data)">
+                    <h2 class="title">CONNEXION</h2>
+                    <div class="input-field">
+                        <mat-icon>person</mat-icon>
+                        <input type="text" placeholder="Login" name="login" [(ngModel)]='login' ngModel />
+                    </div>
+                    <div class="input-field">
+                        <mat-icon>key</mat-icon>
+                        <input type="password" placeholder="Password" name="password" [(ngModel)]='password' ngModel />
+                    </div>
+                    <button type="submit" value="Login" [disabled]="login==='' && password===''" class="btn solid">Login</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <img src="assets/web2.png" class="image" alt="" />
+            </div>
+
+        </div>
+    </div>
+</content>

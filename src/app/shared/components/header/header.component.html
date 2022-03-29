@@ -1,0 +1,29 @@
+<mat-toolbar class="head">
+    <mat-toolbar-row>
+        <button mat-icon-button (click)="toggleSideBar()">
+            <mat-icon>menu</mat-icon>
+        </button>
+
+        <span> MENU</span>
+
+        <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+            <ul fxLayout="row" fxLayoutGap="20px">
+                <li>
+                    <button mat-button [matMenuTriggerFor]="menu">
+                      <img src="./assets/web2.png" alt="" class="user-image mr-1 p-2" />
+                        &nbsp;<b>{{data.nom}}</b>
+                        <mat-icon class="user-image-icon ml-1">keyboard_arrow_down</mat-icon
+                          >
+                    </button>
+                    <mat-menu #menu="matMenu">
+                        <button type="reset" mat-menu-item class="discont" (click)='LogOut()'>
+                            <mat-icon >exit_to_app</mat-icon>
+                            Deconnecter
+                        </button>
+                    </mat-menu>
+
+                </li>
+            </ul>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>

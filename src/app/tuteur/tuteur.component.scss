@@ -1,0 +1,61 @@
+.stats-cards {
+    .mat-card {
+        overflow: hidden;
+    }
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    padding: 1px;
+    justify-content: center;
+    text-align: center;
+}
+
+button {
+    border: none;
+    background: none;
+    .info {
+        color: blue;
+    }
+    .del {
+        color: red;
+    }
+    .edit {
+        color: green;
+    }
+}
+
+.det {
+    font-size: 1.5rem;
+    justify-content: start;
+    align-items: center;
+    text-align: start;
+}
+
+.button1 {
+    background-color: green;
+    color: #fff;
+    // font-size: 1.8rem;
+    margin-bottom: 7px;
+    justify-content: end;
+}
+
+.table-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.button2 {
+    margin-left: 70%;
+    background: blue;
+    color: #fff;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #000;
+}

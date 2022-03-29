@@ -1,0 +1,60 @@
+.example-card {
+    width: 260px;
+    height: 150px;
+    border-radius: 1rem;
+    box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.5);
+    mat-card-title {
+        color: white;
+    }
+}
+
+.tuteur {
+    background: #ff8000;
+        p {
+        color: #fff;
+    }
+}
+
+.ecole {
+    background: #004D91;
+    p {
+        color: #fff;
+    }
+}
+
+.user {
+    background: purple;
+    p {
+        color: #fff;
+    }
+}
+
+.accepter {
+    background: rgb(104, 172, 104);
+    p {
+        color: #fff;
+    }
+}
+
+.rejetter {
+    background: rgb(192, 82, 82);
+    p {
+        color: #fff;
+    }
+}
+
+.notifice {
+    background: #7da8ce;
+    p {
+        color: #fff;
+    }
+}
+
+mat-icon {
+    font-size: 4.2rem;
+    color: aliceblue;
+}
+
+p {
+    font-size: 1rem;
+}

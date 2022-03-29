@@ -1,0 +1,24 @@
+.example-card {
+    width: 250px;
+    border-radius: 4%;
+    box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.5);
+    mat-card-title {
+        color: white;
+    }
+}
+
+.tuteur {
+    background: #ff8000;
+}
+
+.ecole {
+    background: #004D91;
+}
+
+.user {
+    background: green;
+}
+
+mat-icon {
+    font-size: 4.2rem;
+}

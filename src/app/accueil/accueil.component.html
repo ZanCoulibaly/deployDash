@@ -1,0 +1,69 @@
+<mat-grid-list cols="3" rowHeight="2:1">
+    <mat-grid-tile>
+        <mat-card class="example-card tuteur" (click)="nmbreTuteur()">
+            <mat-card-title>Tuteur</mat-card-title>
+            <mat-card-content>
+                <p>
+                    <mat-icon>person</mat-icon>
+                </p><br>
+                <p>Nombre Tuteur : <b>{{t}}</b> </p>
+            </mat-card-content>
+        </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <mat-card class="example-card ecole" (click)="nmbreEcole()">
+            <mat-card-title>Ecole</mat-card-title>
+            <mat-card-content>
+                <p>
+                    <mat-icon>school</mat-icon>
+                </p><br>
+                <p>Nombre Ecole : <b>{{E}}</b> </p>
+            </mat-card-content>
+        </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <mat-card class="example-card user" (click)="nmbreParent()">
+            <mat-card-title>Parent & Elève</mat-card-title>
+            <mat-card-content>
+                <p>
+                    <mat-icon>people</mat-icon>
+                </p><br>
+                <p>Nombre Parent : <b>{{p}}</b> <br> Nombre Elève : <b>{{e}}</b> </p>
+            </mat-card-content>
+        </mat-card>
+    </mat-grid-tile><br>
+    <mat-grid-tile>
+        <mat-card class="example-card accepter">
+            <mat-card-title>Demande Accepter</mat-card-title>
+            <mat-card-content>
+                <p>
+                    <mat-icon>offline_pin</mat-icon>
+                </p><br>
+                <p>0</p>
+            </mat-card-content>
+        </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <mat-card class="example-card rejetter">
+            <mat-card-title>Demande Rejetter</mat-card-title>
+            <mat-card-content>
+                <p>
+                    <mat-icon>highlight_off</mat-icon>
+                </p><br>
+                <p>0</p>
+            </mat-card-content>
+        </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <mat-card class="example-card notifice">
+            <mat-card-title>Notifications</mat-card-title>
+            <mat-card-content>
+                <p>
+                    <mat-icon>perm_phone_msg</mat-icon>
+                </p><br>
+                <p>5</p>
+            </mat-card-content>
+        </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>
+<highcharts-chart style="width: 100%; height: 400px; display: block;"></highcharts-chart>

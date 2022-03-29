@@ -1,0 +1,14 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    // position: sticky;
+}
+
+mat-drawer {
+    width: 260px;
+}
+
+mat-drawer-container {
+    height: 100%;
+}

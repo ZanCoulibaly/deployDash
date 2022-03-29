@@ -1,0 +1,126 @@
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="90px">
+    <h2>Tuteur</h2>
+    <div fxFlex="100" *ngIf="mode==1">
+        <div class="mat-elevation-z8">
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nom</th>
+                        <th scope="col">Prénom</th>
+                        <th scope="col">Profile</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let app of list">
+                        <td>{{app.id }}</td>
+                        <td>{{app.nom }}</td>
+                        <td> {{app.prenom}} </td>
+                        <td> {{app.profile}} </td>
+                        <td>
+
+                            <button>
+                        <mat-icon class="edit" (click)="editer(app.id)"  >editer</mat-icon>
+                    </button>
+                            <button>
+                        <mat-icon class="del" (click)="sweetAlert(app.id)">delete</mat-icon>
+                    </button>
+                            <button>
+                        <mat-icon class="info" (click)="getDetails(app.id)">info</mat-icon>
+                    </button>
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <mat-paginator [pageSizeOptions]="[10, 20]"></mat-paginator>
+        </div>
+    </div>
+
+    <!-- Details pages -->
+    <div fxFlex="100" *ngIf="mode==2">
+        <div class="mat-elevation-z8">
+            <button (click)="back1()">
+          <mat-icon >arrow_back</mat-icon>
+    </button>
+            <mat-list role="list" class="det">
+                <b>Nom :</b> &nbsp; &nbsp;{{donne.nom}} <br>
+                <b>Prénom :</b> &nbsp; &nbsp;{{donne.prenom}} <br>
+                <b>Téléphone :</b>&nbsp; &nbsp;{{donne.numero}} <br>
+                <b>Profil :</b>&nbsp; &nbsp;{{donne.profile}} <br>
+                <b>Addresse : </b>&nbsp; &nbsp;{{donne.addresse}} <br>
+                <br>
+                <button mat-raised-button class="button1" (click)="editer(donne.id)">Modifier</button>
+            </mat-list>
+        </div>
+    </div>
+    <!-- Modifier pages -->
+    <div fxFlex="100" *ngIf="mode==3">
+        <div class="mat-elevation-z8">
+            <button (click)="back1()">
+          <mat-icon >arrow_back</mat-icon>
+    </button>
+
+            <!-- <div class="det"> -->
+            <form class="table-form">
+                <table class="table-full-width" cellspacing="0">
+                    <tr>
+                        <td>
+                            <mat-form-field class="table-full-width" appearance="fill">
+                                <mat-label>Nom</mat-label>
+                                <input matInput [value]="delta.nom" name="nom">
+                            </mat-form-field>
+                        </td>
+                        <td>
+                            <mat-form-field class="table-full-width" appearance="fill">
+                                <mat-label>Prénom</mat-label>
+                                <input matInput [value]="delta.prenom" name="prenom">
+                            </mat-form-field>
+                        </td>
+                        <td>
+                            <mat-form-field class="table-full-width" appearance="fill">
+                                <mat-label>Matières à maîtriser</mat-label>
+                                <input matInput [value]="delta.cour" name="cour">
+                            </mat-form-field>
+                        </td>
+                    </tr>
+                </table>
+
+                <p>
+                    <mat-form-field class="table-full-width" appearance="fill">
+                        <mat-label>Téléphone</mat-label>
+                        <input matInput [value]="delta.numero" name="numero">
+                    </mat-form-field><br>
+                    <mat-form-field class="table-full-width" appearance="fill">
+                        <mat-label>Etablissement</mat-label>
+                        <input matInput [value]="delta.ecole" name="ecole">
+                    </mat-form-field>
+                </p>
+
+                <table class="table-full-width" cellspacing="0">
+                    <tr>
+                        <td>
+                            <mat-form-field class="table-full-width" appearance="fill">
+                                <mat-label>Addresse</mat-label>
+                                <input matInput [value]="delta.addresse" name="addresse">
+                            </mat-form-field>
+                        </td>
+                        <td>
+                            <mat-form-field class="table-full-width" appearance="fill">
+                                <mat-label>Profile</mat-label>
+                                <input matInput [value]="delta.profile" name="profile">
+                            </mat-form-field>
+                        </td>
+                        <td>
+                            <button mat-raised-button type="submit" class="button2">Valider</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <!-- </div> -->
+        </div>
+    </div>
+</div>
